@@ -8,12 +8,6 @@ export default function () {
   const history = useHistory();
 
   const [signUpForm, setSignUpForm] = useState({});
-  const handleChange = useCallback((event) => {
-    event.preventDefault();
-    setSignUpForm((prev) => {
-      return { ...prev, [event.target.name]: event.target.value };
-    });
-  }, []);
   const submitHandler = useCallback(
     async (data) => {
       try {
