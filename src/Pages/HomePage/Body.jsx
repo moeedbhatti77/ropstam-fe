@@ -91,7 +91,6 @@ export default function () {
       ),
     },
   ];
-  const token = localStorage.getItem("token") || null;
   const history = useHistory();
   const [vehicles, setVehicles] = useState([]);
   const [count, setCount] = useState(null);
@@ -102,6 +101,7 @@ export default function () {
     []
   );
 
+  const token = localStorage.getItem("token") || null;
   useEffect(() => {
     if (!token) {
       history.push("/login");
@@ -141,6 +141,7 @@ export default function () {
         }}
         type="dashed"
         icon={<PlusOutlined />}
+        onClick={() => history.push("/vehicleAction")}
       >
         Add
       </Button>

@@ -5,7 +5,7 @@ import Body from "./Pages/HomePage/Body";
 import Login from "./components/Auth/login";
 import SignUp from "./components/Auth/signup";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import PostPage from "./Pages/PostPage/PostPage";
+import VehicleAction from "./Pages/VehiclePage/VehicleAddUpdate";
 import NavigationBar from "./components/NavBar/NavigationBar";
 import axiosInstance from "./helpers/axios";
 import { useSelector, useDispatch } from "react-redux";
@@ -31,6 +31,7 @@ function App() {
           <Route exact path="/" component={Body} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signUp" component={SignUp} />
+          <Route exact path="/vehicleAction" component={VehicleAction} />
           {/* <Route exact path="/Post/:postId" component={PostPage} /> */}
         </Switch>
       </Router>
