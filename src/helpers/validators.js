@@ -15,8 +15,9 @@ export const CreateVehicleSchema = Yup.object().shape({
   make: Yup.string().required("Make of Vehicle is required"),
   model: Yup.string().required("Mode of Vehicle is required"),
   color: Yup.string().required("Color of Vehicle is required"),
-  registeredYear: Yup.number()
-    .max(new Date().getFullYear())
-    .min(1900)
-    .required("Vehicle Registration year is required"),
+  category: Yup.string(),
+  registeredYear: Yup.number().max(new Date().getFullYear()).min(1900),
+});
+export const CreateCategorySchema = Yup.object().shape({
+  name: Yup.string().required("Name of Category is required"),
 });

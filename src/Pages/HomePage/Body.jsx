@@ -47,9 +47,10 @@ export default function () {
       },
     },
     {
-      title: "Vehicle Type",
-      dataIndex: "type",
-      key: "type",
+      title: "Vehicle Category",
+      dataIndex: "category",
+      key: "category",
+      render: (val) => val?.name,
     },
     {
       title: "Action",
